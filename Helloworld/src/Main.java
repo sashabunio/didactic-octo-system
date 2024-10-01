@@ -54,5 +54,53 @@ public class Main {
         System.out.println(myStringEndsWith);
         String updatedString = myString.replace('s', 'S');
         System.out.println(updatedString);
+
+
+
+        // Дз 30.09
+        Scanner scanner = new Scanner(System.in);
+        int score = 0; // не понимаю какое значение нужно подставить в score. Программа не работает, но у меня закончились варианты.
+        while (score < 0 && score > 100) {
+            System.out.println("Please enter your score: ");
+            score = scanner.nextInt();
+            System.out.println("Please enter correct score (0-100)");
+            score = scanner.nextInt();
+        }
+        System.out.println("Success!");
+
+
+        String userInput = "";
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            if (userInput.equals("Exit")) {
+                break;
+            }
+            System.out.println("Please enter something");
+            userInput = scanner.nextLine();
+        }
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Please enter a number: ");
+        int x = scanner.nextInt();
+        int sum = 0;
+        for (int i = 0; i >= x; i--){
+            sum +=i;
+        }
+        System.out.printf("The sum of all numbers from 0 to %d is %d", x, sum);
+
+        String[] channels = new String[5];
+        channels[0] = "Exit";
+        channels[1] = "TNT";
+        channels[2] = "MuzTV";
+        channels[3] = "MirTV";
+        channels[4] = "ONT";
+        for (int i=1; i < channels.length; ) {
+            System.out.print("\nВведите номер канала: ");
+            i = new Scanner(System.in).nextInt();
+            if (i == 0) {
+                break;
+            }
+            System.out.printf("Номер канала: %d, название канала: %s", i, channels[i]);
+        }
     }
 }
