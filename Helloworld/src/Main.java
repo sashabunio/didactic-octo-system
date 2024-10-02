@@ -58,15 +58,14 @@ public class Main {
 
 
         // Дз 30.09
-        Scanner scanner = new Scanner(System.in);
-        int score = 0; // не понимаю какое значение нужно подставить в score. Программа не работает, но у меня закончились варианты.
-        while (score < 0 && score > 100) {
-            System.out.println("Please enter your score: ");
-            score = scanner.nextInt();
-            System.out.println("Please enter correct score (0-100)");
-            score = scanner.nextInt();
+        for (int i = 0; i < 100; ) {
+            System.out.println("Введите вашу оценку (0-100): ");
+            int score = new Scanner(System.in).nextInt();
+            if (score > 0 && score < 100) {
+                break; }
+            System.out.println("Некорректное значение!");
         }
-        System.out.println("Success!");
+        System.out.println("Поздравляю!");
 
 
         String userInput = "";
@@ -84,7 +83,7 @@ public class Main {
         int x = scanner.nextInt();
         int sum = 0;
         for (int i = 0; i >= x; i--){
-            sum +=i;
+            sum += i;
         }
         System.out.printf("The sum of all numbers from 0 to %d is %d", x, sum);
 
