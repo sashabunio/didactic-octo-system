@@ -87,18 +87,26 @@ public class Main {
         System.out.print("Please enter a number: ");
         int x = scanner.nextInt();
         int sum = 0;
-        for (int i = 0; i >= x; i--){
-            sum += i;
+        if (x < 0) {
+            for (int i = 0; i >= x; i--) {
+                sum += i;
+            };
+        }
+        else if (x > 0) {
+            for (int i = 0; i <= x; i++) {
+                sum += i;
+
+            }
         }
         System.out.printf("The sum of all numbers from 0 to %d is %d", x, sum);
 
         String[] channels = new String[5];
-        channels[0] = "Exit";
         channels[1] = "TNT";
         channels[2] = "MuzTV";
         channels[3] = "MirTV";
         channels[4] = "ONT";
-        for (int i=1; i < channels.length; ) {
+        int i;
+        do {
             System.out.print("\nВведите номер канала: ");
             i = new Scanner(System.in).nextInt();
             if (i == 0) {
@@ -106,5 +114,6 @@ public class Main {
             }
             System.out.printf("Номер канала: %d, название канала: %s", i, channels[i]);
         }
+        while (i > 0 && i < channels.length);
     }
 }
