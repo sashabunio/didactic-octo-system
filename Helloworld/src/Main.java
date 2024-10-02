@@ -58,14 +58,19 @@ public class Main {
 
 
         // Дз 30.09
-        for (int i = 0; i < 100; ) {
-            System.out.println("Введите вашу оценку (0-100): ");
-            int score = new Scanner(System.in).nextInt();
-            if (score > 0 && score < 100) {
-                break; }
-            System.out.println("Некорректное значение!");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Пожалуйста введите свою оценку: ");
+        int userInput = new Scanner(System.in).nextInt();
+        while (userInput < 0 || userInput > 100) {
+            System.out.println("Пожалуйста введите корректное значение (0-100): " );
+            userInput = scanner.nextInt();
         }
-        System.out.println("Поздравляю!");
+        if (userInput >= 70) {
+            System.out.println("Congrats! You passed the test!");
+        }
+        else {
+            System.out.println("You failed the test!");
+        }
 
 
         String userInput = "";
