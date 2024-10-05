@@ -30,7 +30,7 @@ public class Apples {
                 size, color, taste, sort, price, weight);
     }
 
-    public static void appleTypes () {
+    public static void describeAppleSorts () {
         System.out.println("We have 2 apple sorts: Nora and Bella!");
     }
 }

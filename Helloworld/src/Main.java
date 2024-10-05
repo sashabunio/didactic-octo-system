@@ -123,6 +123,6 @@ public class Main {
         redApple.appleInfo();
         greenApple.setSalePrice(12.3);
         System.out.println(greenApple.getSalePrice());
-        Apples.appleTypes();
+        Apples.describeAppleSorts();
     }
 }
