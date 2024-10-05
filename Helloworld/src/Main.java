@@ -115,5 +115,14 @@ public class Main {
             System.out.printf("Номер канала: %d, название канала: %s", i, channels[i]);
         }
         while (i > 0 && i < channels.length);
+
+
+        // дз 02.10
+        Apples redApple = new Apples("small", "red", "sweet", "Nora", 4.5, 1.2, 9.3);
+        Apples greenApple = new Apples("small", "green", "sour", "Bella", 6.9, 1.7, 11.5);
+        redApple.appleInfo();
+        greenApple.setSalePrice(12.3);
+        System.out.println(greenApple.getSalePrice());
+        Apples.appleTypes();
     }
 }
