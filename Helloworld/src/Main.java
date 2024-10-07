@@ -54,5 +54,75 @@ public class Main {
         System.out.println(myStringEndsWith);
         String updatedString = myString.replace('s', 'S');
         System.out.println(updatedString);
+
+
+
+        // Дз 30.09
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Пожалуйста введите свою оценку: ");
+        int userInput = new Scanner(System.in).nextInt();
+        while (userInput < 0 || userInput > 100) {
+            System.out.println("Пожалуйста введите корректное значение (0-100): " );
+            userInput = scanner.nextInt();
+        }
+        if (userInput >= 70) {
+            System.out.println("Congrats! You passed the test!");
+        }
+        else {
+            System.out.println("You failed the test!");
+        }
+
+
+        String userInput = "";
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            if (userInput.equals("Exit")) {
+                break;
+            }
+            System.out.println("Please enter something");
+            userInput = scanner.nextLine();
+        }
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Please enter a number: ");
+        int x = scanner.nextInt();
+        int sum = 0;
+        if (x < 0) {
+            for (int i = 0; i >= x; i--) {
+                sum += i;
+            };
+        }
+        else if (x > 0) {
+            for (int i = 0; i <= x; i++) {
+                sum += i;
+
+            }
+        }
+        System.out.printf("The sum of all numbers from 0 to %d is %d", x, sum);
+
+        String[] channels = new String[5];
+        channels[1] = "TNT";
+        channels[2] = "MuzTV";
+        channels[3] = "MirTV";
+        channels[4] = "ONT";
+        int i;
+        do {
+            System.out.print("\nВведите номер канала: ");
+            i = new Scanner(System.in).nextInt();
+            if (i == 0) {
+                break;
+            }
+            System.out.printf("Номер канала: %d, название канала: %s", i, channels[i]);
+        }
+        while (i > 0 && i < channels.length);
+
+
+        // дз 02.10
+        Apples redApple = new Apples("small", "red", "sweet", "Nora", 4.5, 1.2, 9.3);
+        Apples greenApple = new Apples("small", "green", "sour", "Bella", 6.9, 1.7, 11.5);
+        redApple.appleInfo();
+        greenApple.setSalePrice(12.3);
+        System.out.println(greenApple.getSalePrice());
+        Apples.describeAppleSorts();
     }
 }
