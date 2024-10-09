@@ -1,3 +1,8 @@
+import Chancellery.*;
+import Chancellery.pen.Corpus;
+import Chancellery.pen.Pen;
+import Chancellery.pen.Refill;
+
 import java.util.Scanner;
 
 public class Main {
@@ -56,19 +61,17 @@ public class Main {
         System.out.println(updatedString);
 
 
-
         // Дз 30.09
         Scanner scanner = new Scanner(System.in);
         System.out.println("Пожалуйста введите свою оценку: ");
         int userInput = new Scanner(System.in).nextInt();
         while (userInput < 0 || userInput > 100) {
-            System.out.println("Пожалуйста введите корректное значение (0-100): " );
+            System.out.println("Пожалуйста введите корректное значение (0-100): ");
             userInput = scanner.nextInt();
         }
         if (userInput >= 70) {
             System.out.println("Congrats! You passed the test!");
-        }
-        else {
+        } else {
             System.out.println("You failed the test!");
         }
 
@@ -90,9 +93,9 @@ public class Main {
         if (x < 0) {
             for (int i = 0; i >= x; i--) {
                 sum += i;
-            };
-        }
-        else if (x > 0) {
+            }
+            ;
+        } else if (x > 0) {
             for (int i = 0; i <= x; i++) {
                 sum += i;
 
@@ -101,6 +104,7 @@ public class Main {
         System.out.printf("The sum of all numbers from 0 to %d is %d", x, sum);
 
         String[] channels = new String[5];
+        channels[0] = "SDF";
         channels[1] = "TNT";
         channels[2] = "MuzTV";
         channels[3] = "MirTV";
@@ -112,10 +116,9 @@ public class Main {
             if (i == 0) {
                 break;
             }
-            System.out.printf("Номер канала: %d, название канала: %s", i, channels[i]);
+            System.out.printf("Номер канала: %d, название канала: %s", i, channels[i - 1]);
         }
         while (i > 0 && i < channels.length);
-
 
         // дз 02.10
         Apples redApple = new Apples("small", "red", "sweet", "Nora", 4.5, 1.2, 9.3);
@@ -124,5 +127,17 @@ public class Main {
         greenApple.setSalePrice(12.3);
         System.out.println(greenApple.getSalePrice());
         Apples.describeAppleSorts();
+
+
+        // дз 07.10
+        Refill blueRefill = new Refill(0.4, "синий");
+        Corpus pinkCorpus = new Corpus(1, 9, "розовый", false,
+                "пластик");
+        Pen Hellit = new Pen("Hellit", 1.50, blueRefill, pinkCorpus);
+        Hellit.printInfo();
+
+        Pencil greyPencil = new Pencil(true, "grey", 2.2, "Levin");
+        Eraser circleEraser = new Eraser("white", "circle", 12, "Lol", 1.20);
+        System.out.println(circleEraser.getEraserColor());
     }
 }
