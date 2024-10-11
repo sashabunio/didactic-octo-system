@@ -1,4 +1,4 @@
-package Chancellery;
+package сhancellery;
 
 public class Pencil extends Chancellery {
     private boolean containsEraser;

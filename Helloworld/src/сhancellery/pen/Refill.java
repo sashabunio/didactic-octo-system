@@ -1,4 +1,4 @@
-package Chancellery.pen;
+package сhancellery.pen;
 
 public class Refill {
     double refillWidth;

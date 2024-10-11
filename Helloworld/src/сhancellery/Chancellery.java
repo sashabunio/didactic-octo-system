@@ -1,4 +1,4 @@
-package Chancellery;
+package сhancellery;
 
 import java.util.Scanner;
 public class Chancellery {
@@ -8,8 +8,9 @@ public class Chancellery {
         public String getFirm() {
             return firm;
         }
+
         public void setFirm (){
-        this.firm = new Scanner(System.in).nextLine();
+            this.firm = new Scanner(System.in).nextLine();
         }
 
         public double getPrice() {

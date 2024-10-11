@@ -1,7 +1,7 @@
-import Chancellery.*;
-import Chancellery.pen.Corpus;
-import Chancellery.pen.Pen;
-import Chancellery.pen.Refill;
+import сhancellery.*;
+import сhancellery.pen.Corpus;
+import сhancellery.pen.Pen;
+import сhancellery.pen.Refill;
 
 import java.util.Scanner;
 
@@ -94,11 +94,9 @@ public class Main {
             for (int i = 0; i >= x; i--) {
                 sum += i;
             }
-            ;
         } else if (x > 0) {
             for (int i = 0; i <= x; i++) {
                 sum += i;
-
             }
         }
         System.out.printf("The sum of all numbers from 0 to %d is %d", x, sum);
@@ -121,8 +119,8 @@ public class Main {
         while (i > 0 && i < channels.length);
 
         // дз 02.10
-        Apples redApple = new Apples("small", "red", "sweet", "Nora", 4.5, 1.2, 9.3);
-        Apples greenApple = new Apples("small", "green", "sour", "Bella", 6.9, 1.7, 11.5);
+        Apples redApple = new Apples("small", "red", "sweet", "nora", 4.5, 1.2, 9.3);
+        Apples greenApple = new Apples("small", "green", "sour", "bella", 6.9, 1.7, 11.5);
         redApple.appleInfo();
         greenApple.setSalePrice(12.3);
         System.out.println(greenApple.getSalePrice());
@@ -133,10 +131,10 @@ public class Main {
         Refill blueRefill = new Refill(0.4, "синий");
         Corpus pinkCorpus = new Corpus(1, 9, "розовый", false,
                 "пластик");
-        Pen Hellit = new Pen("Hellit", 1.50, blueRefill, pinkCorpus);
+        Pen Hellit = new Pen("hellit", 1.50, blueRefill, pinkCorpus);
         Hellit.printInfo();
 
-        Pencil greyPencil = new Pencil(true, "grey", 2.2, "Levin");
+        Pencil greyPencil = new Pencil(true, "grey", 2.2, "levin");
         Eraser circleEraser = new Eraser("white", "circle", 12, "Lol", 1.20);
         System.out.println(circleEraser.getEraserColor());
     }

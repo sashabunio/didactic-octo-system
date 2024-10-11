@@ -1,4 +1,4 @@
-package Chancellery;
+package сhancellery;
 
 public class Eraser extends Chancellery {
     private String eraserColor;

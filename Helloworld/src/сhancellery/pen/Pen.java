@@ -1,6 +1,6 @@
-package Chancellery.pen;
+package сhancellery.pen;
 
-import Chancellery.Chancellery;
+import сhancellery.Chancellery;
 
 public class Pen extends Chancellery {
     private Refill refill;
