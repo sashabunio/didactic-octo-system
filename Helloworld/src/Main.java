@@ -1,3 +1,5 @@
+import program.File;
+import program.Menu;
 import сhancellery.*;
 import сhancellery.pen.Corpus;
 import сhancellery.pen.Pen;
@@ -131,11 +133,17 @@ public class Main {
         Refill blueRefill = new Refill(0.4, "синий");
         Corpus pinkCorpus = new Corpus(1, 9, "розовый", false,
                 "пластик");
-        Pen Hellit = new Pen("hellit", 1.50, blueRefill, pinkCorpus);
-        Hellit.printInfo();
+        Pen hellit = new Pen("hellit", 1.50, blueRefill, pinkCorpus);
+        hellit.printInfo();
 
         Pencil greyPencil = new Pencil(true, "grey", 2.2, "levin");
-        Eraser circleEraser = new Eraser("white", "circle", 12, "Lol", 1.20);
-        System.out.println(circleEraser.getEraserColor());
+//        Eraser circleEraser = new Eraser("white", "circle", 12, "Lol", 1.20);
+//        System.out.println(circleEraser.getEraserColor());
+//
+//        greyPencil.setContainEraser();
+//        System.out.println(greyPencil.getContainsEraser());
+
+        // дз 09.10
+        Menu.showMenu();
     }
 }
