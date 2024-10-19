@@ -35,7 +35,7 @@ public class Main {
         buffer.append("\nMy Gender is: ");
         buffer.append(myGender);
         System.out.println(buffer);
-        System.out.println("My name is Aliaksandra: " + myNameIsAliaksandra);
+        System.out.println("My name is Aliaksandra: " + myNameIsAliaksandra); // jar file запустился, но в консоли последняя строка эта. Почему?
 
         Scanner scanner = new Scanner(System.in);
         String myString = scanner.nextLine();
@@ -64,7 +64,7 @@ public class Main {
 
 
         // Дз 30.09
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
         System.out.println("Пожалуйста введите свою оценку: ");
         int userInput = new Scanner(System.in).nextInt();
         while (userInput < 0 || userInput > 100) {
@@ -78,17 +78,17 @@ public class Main {
         }
 
 
-        String userInput = "";
-        Scanner scanner = new Scanner(System.in);
+        String userInput1 = "";
+//        Scanner scanner = new Scanner(System.in);
         while (true) {
-            if (userInput.equals("Exit")) {
+            if (userInput1.equals("Exit")) {
                 break;
             }
             System.out.println("Please enter something");
-            userInput = scanner.nextLine();
+            userInput1 = scanner.nextLine();
         }
 
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
         System.out.print("Please enter a number: ");
         int x = scanner.nextInt();
         int sum = 0;
