@@ -27,7 +27,7 @@ public class Pencil extends Chancellery {
             this.containsEraser = true;
         } else if (i == 2) {
             this.containsEraser = false;
-        } else if (i != 1 && i != 2) {
+        } else {
                 System.out.println("Please enter 1 or 2!");
                 int userInput = scanner.nextInt();
             }

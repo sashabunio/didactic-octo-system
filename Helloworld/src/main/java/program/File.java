@@ -11,6 +11,11 @@ public class File {
     public static void createFile() {
         try {
             FileWriter file = new FileWriter("C:\\Users\\Asus\\user_input.txt", false);
+            file.write("Pencil contains eraser\n");
+            file.write("Black\n");
+            file.write("Olla\n");
+            file.write(String.valueOf(Double.parseDouble("3.25")));
+            file.close();
         } catch (IOException e) {
             System.out.println("Sorry, can't open this file" + e.getMessage());
         }

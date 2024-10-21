@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Menu {
 
-    public static void createNewPencil() {
+    public static void createNewPencil () {
         Pencil userPencil = new Pencil(true, "grey", 2.2, "levin");
         PencilContainsEraser.pencilContainsEraserInput();//задает инфу про колпачок. Как привязать к объекту?
         userPencil.setRefillColor(); //задает инфу о цвете грифа
@@ -24,6 +24,7 @@ public class Menu {
              i = scanner.nextInt();
              if (i == 1) {
                  createNewPencil();
+                 File.createFile();
              } else if (i == 2) {
                  File.readFromFile();
              } else if (i == 0) {
