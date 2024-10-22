@@ -17,7 +17,7 @@ public class Apples {
         this.salePrice = salePrice;
     }
 
-    public void setSalePrice(double salePrice) {
+        public void setSalePrice(double salePrice) {
         this.salePrice = salePrice;
     }
 

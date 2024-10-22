@@ -14,11 +14,11 @@ public class Main {
         int myAge = 25;
         char myGender = 'F';
         boolean myNameIsAliaksandra = true;
-       String myName = "Aliaksanda";
-       String mySurname = "Shabunio";
-       double myHeight = 1.64;
+        String myName = "Aliaksanda";
+        String mySurname = "Shabunio";
+        double myHeight = 1.64;
 
-       String infoAboutMe = String.format("My age: %s , My gender: %s , My name: %s , My surname: %s , My Height : %f ",
+        String infoAboutMe = String.format("My age: %s , My gender: %s , My name: %s , My surname: %s , My Height : %f ",
                 myAge, myGender, myName, mySurname, myHeight);
         System.out.println(infoAboutMe);
         System.out.println("My Gender is " + myGender + " , My name is " + myName + " , My Surname is "
@@ -145,5 +145,9 @@ public class Main {
 
         // дз 09.10
         Menu.showMenu();
+
+        // дз 22.10
+        System.out.println(Pencil.negativeTest(29,1));
+        }
+
     }
-}

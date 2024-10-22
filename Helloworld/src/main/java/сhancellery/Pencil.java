@@ -33,6 +33,15 @@ public class Pencil extends Chancellery {
             }
     }
 
+    public static boolean negativeTest (int a, int b) {
+        boolean d = a < b;
+        return d;
+    }
+
+    public static double positiveTest (int a, int b) {
+        int c = (a * b)/1000;
+        return c;
+    }
 
     public String getRefillColor () {
         return refillColor;
