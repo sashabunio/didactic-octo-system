@@ -1,3 +1,5 @@
+import program.File;
+import program.Menu;
 import сhancellery.*;
 import сhancellery.pen.Corpus;
 import сhancellery.pen.Pen;
@@ -11,10 +13,10 @@ public class Main {
 
         int myAge = 25;
         char myGender = 'F';
-        double myHeight = 1.64;
         boolean myNameIsAliaksandra = true;
         String myName = "Aliaksanda";
         String mySurname = "Shabunio";
+        double myHeight = 1.64;
 
         String infoAboutMe = String.format("My age: %s , My gender: %s , My name: %s , My surname: %s , My Height : %f ",
                 myAge, myGender, myName, mySurname, myHeight);
@@ -33,7 +35,7 @@ public class Main {
         buffer.append("\nMy Gender is: ");
         buffer.append(myGender);
         System.out.println(buffer);
-        System.out.println("My name is Aliaksandra: " + myNameIsAliaksandra);
+        System.out.println("My name is Aliaksandra: " + myNameIsAliaksandra); // jar file запустился, но в консоли последняя строка эта. Почему?
 
         Scanner scanner = new Scanner(System.in);
         String myString = scanner.nextLine();
@@ -62,7 +64,7 @@ public class Main {
 
 
         // Дз 30.09
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
         System.out.println("Пожалуйста введите свою оценку: ");
         int userInput = new Scanner(System.in).nextInt();
         while (userInput < 0 || userInput > 100) {
@@ -76,17 +78,17 @@ public class Main {
         }
 
 
-        String userInput = "";
-        Scanner scanner = new Scanner(System.in);
+        String userInput1 = "";
+//        Scanner scanner = new Scanner(System.in);
         while (true) {
-            if (userInput.equals("Exit")) {
+            if (userInput1.equals("Exit")) {
                 break;
             }
             System.out.println("Please enter something");
-            userInput = scanner.nextLine();
+            userInput1 = scanner.nextLine();
         }
 
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
         System.out.print("Please enter a number: ");
         int x = scanner.nextInt();
         int sum = 0;
@@ -131,11 +133,21 @@ public class Main {
         Refill blueRefill = new Refill(0.4, "синий");
         Corpus pinkCorpus = new Corpus(1, 9, "розовый", false,
                 "пластик");
-        Pen Hellit = new Pen("hellit", 1.50, blueRefill, pinkCorpus);
-        Hellit.printInfo();
+        Pen hellit = new Pen("hellit", 1.50, blueRefill, pinkCorpus);
+        hellit.printInfo();
 
         Pencil greyPencil = new Pencil(true, "grey", 2.2, "levin");
         Eraser circleEraser = new Eraser("white", "circle", 12, "Lol", 1.20);
         System.out.println(circleEraser.getEraserColor());
+
+        greyPencil.setContainEraser();
+        System.out.println(greyPencil.getContainsEraser());
+
+        // дз 09.10
+        Menu.showMenu();
+
+        // дз 22.10
+        System.out.println(Pencil.negativeTest(29,1));
+        }
+
     }
-}

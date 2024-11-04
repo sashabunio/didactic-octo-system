@@ -8,4 +8,8 @@ public class Refill {
         this.refillWidth = refillWidth;
         this.refillColor = refillColor;
     }
+
+    public void getReffilColor () {
+
+    }
 }

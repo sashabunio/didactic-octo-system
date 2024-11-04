@@ -10,6 +10,7 @@ public class Chancellery {
         }
 
         public void setFirm (){
+            System.out.println("Please enter the firm of your pencil:\n");
             this.firm = new Scanner(System.in).nextLine();
         }
 
@@ -17,7 +18,8 @@ public class Chancellery {
             return price;
         }
 
-        public void setPrice() {
-            this.price = new Scanner(System.in).nextInt();
+        public void setPrice() { // кидает ошибку если ввожу десятичное число, не понимаю почему. С целым все ок.
+            System.out.println("Please enter the price of your pencil:\n");
+            this.price = new Scanner(System.in).nextDouble();
         }
     }
